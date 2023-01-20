@@ -1,0 +1,7 @@
+<h1> Index !</h1>
+
+<div class="d-flex">
+  <% @posts.each do |post| %>
+    <%= render 'post', post: post %>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="header text-center my-3">
+    <h1> My posts !</h1>
+  </div>
+
+  <div class="row">
+    <div class="d-flex flex-wrap justify-content-center">
+      <% @posts.each do |post| %>
+        <%= render 'post', post: post %>
+      <% end %>
+    </div>
+  </div>
+</div>

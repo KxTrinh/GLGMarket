@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  belongs_to :product
 
   validates :title, :content, presence: true
+  validates :price, numericality: { only_integer: true }
+  validates :price, comparison: { greater_than: 0 }
 end
