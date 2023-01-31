@@ -12,4 +12,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :age, numericality: { only_integer: true }
   validates :age, comparison: { greater_than: 0 }
+
+  has_one_attached :avatar
 end
