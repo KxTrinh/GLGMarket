@@ -13,11 +13,11 @@
     <% post.photos.each_with_index do |photo, index| %>
       <% if index == 0 %>
         <div class="carousel-item active">
-          <%= cl_image_tag photo.key, class:"d-block w-100", alt:"...", height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag photo.key, class:"d-block w-100", alt:"...", height: 400, width: 600, crop: :fill %>
         </div>
       <% else %>
         <div class="carousel-item">
-          <%= cl_image_tag photo.key, class:"d-block w-100", alt:"...", height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag photo.key, class:"d-block w-100", alt:"...", height: 400, width: 600, crop: :fill %>
         </div>
       <% end %>
     <% end %>

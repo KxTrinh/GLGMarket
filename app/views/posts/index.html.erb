@@ -3,7 +3,7 @@
     <h1> Index !</h1>
   </div>
 
-  <div class="row">
+  <div class="row" id='card-index'>
     <div class="d-flex flex-wrap justify-content-center">
       <% @posts.each do |post| %>
         <%= render 'post', post: post %>

@@ -7,15 +7,14 @@
   display: flex;
   flex-wrap: center;
 }
+
 .card-post a{
-  text-decoration: none;
+  text-decoration: none !important;
   color: #212529
 }
 
 .card-post img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-body {
@@ -25,4 +24,16 @@
 
 .btn-edit {
   border-radius: 3px !important;
+}
+
+.text-truncate.text-truncate--2{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+#card-index a{
+  text-decoration: none !important;
+  color: #212529
 }

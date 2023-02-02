@@ -1,10 +1,3 @@
-<%= simple_form_for @post do |f| %>
-  <div class="post-form">
-    <%= f.input :title, label: 'Title', error: 'Title is mandatory, please specify one', input_html: { class: 'post-form-input'} %>
-    <%= f.input :content, label: 'Content', error: 'Content is mandatory !', input_html: { class: 'post-form-input'} %>
-    <%= f.input :price, input_html: { class: 'post-form-input', min: "0"} %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true, accept:"image/png, image/jpeg", class:'form-control' } %>
+<h1 class='text-center'>Make a new post !</h1>
 
-    <%= f.button :submit, "Create a post", class: 'post-form-submit'%>
-  </div>
-<% end %>
+<%= render 'form', post: @post %>
