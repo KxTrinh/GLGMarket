@@ -19,6 +19,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
   </div>
