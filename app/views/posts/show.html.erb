@@ -1,39 +1,41 @@
 <div class="container d-flex flex-column align-items-center my-3 my-3">
-  <div class="post-show box-shadow">
-    <div class="mb-4 box-shadow mx-2">
+  <div class="card post-show">
+    <div class="mb-4 mx-2">
       <div id=<%= "#{@post.id}" %> class="carousel slide carousel-fade my-2">
          <% if @post.photos.size > 1 %>
           <%= render 'carousel_show', post: @post %>
         <% else %>
-          <%= cl_image_tag @post.photos.first.key, class:"d-block w-100", alt:"...", height: 400, width: 600  %>
+          <%= cl_image_tag @post.photos.first.key, class:"d-block w-100", alt:"...", height: 400, width: 800  %>
         <% end %>
       </div>
 
       <div class="post-show-content mx-3">
-        <div class="card-info d-flex justify-content-between">
-          <h1><%= @post.title %></h1>
+        <div class="card-body d-flex justify-content-between">
+          <h3 class='card-title'><%= @post.title %></h3>
           <h3 class='price'><%= @post.price%> €</h3>
         </div>
-        <div>
-          <h3><%= @post.content %></h3>
+        <div class='mb-3'>
+          <p class='card-text'><%= @post.content %></p>
         </div>
 
-        <div class="d-flex align-items-center justify-content-between">
-          <small class="text-muted"> Created by <%= @post.user.name %></small>
-          <small class="text-muted" style="margin-left:auto"><%= "#{time_ago_in_words(@post.created_at)} ago"%></small>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <small class="text-muted"> Updated</small>
-          <small class="text-muted" style="margin-left:auto"><%= "#{time_ago_in_words(@post.updated_at)} ago"%></small>
-        </div>
-        <% if current_user && @post.user == current_user %>
-          <div class="d-flex align-items-center mt-3">
-            <div class="btn-group">
-              <%= link_to "Edit", edit_post_path(@post), class: "btn btn-sm btn-outline-secondary btn-edit" %>
-              <%= link_to "Delete this post", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger" %>
-            </div>
+        <div class="card-footer">
+          <div class="d-flex align-items-center justify-content-between">
+            <small class="text-muted"> Created by <%= @post.user.name %></small>
+            <small class="text-muted" style="margin-left:auto"><%= "#{time_ago_in_words(@post.created_at)} ago"%></small>
           </div>
-        <% end %>
+          <div class="d-flex align-items-center justify-content-between">
+            <small class="text-muted"> Updated</small>
+            <small class="text-muted" style="margin-left:auto"><%= "#{time_ago_in_words(@post.updated_at)} ago"%></small>
+          </div>
+          <% if current_user && @post.user == current_user %>
+            <div class="d-flex align-items-center mt-3">
+              <div class="btn-group">
+                <%= link_to "Edit", edit_post_path(@post), class: "btn btn-sm btn-outline-secondary btn-edit" %>
+                <%= link_to "Delete this post", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
