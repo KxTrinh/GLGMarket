@@ -5,6 +5,9 @@
     <%= f.input :price, input_html: { class: 'post-form-input', min: "0"} %>
     <%= f.input :photos, as: :file, input_html: { multiple: true, accept:"image/png, image/jpeg", class:'form-control' } %>
 
-    <%= f.button :submit, "Create a post", class: 'post-form-submit mt-4'%>
+    <div class="actions d-flex mt-4">
+      <%= link_to 'Back to home', root_path, class: 'post-form-cancel text-center' %>
+      <%= f.button :submit, "Create a post", class: 'post-form-submit'%>
+    </div>
   </div>
 <% end %>

@@ -23,10 +23,28 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  opacity: 0.8;
+}
+
+.post-form-cancel {
+  width: 100%;
+  background-color: rgb(169, 20, 9);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .post-form-submit:hover {
-  background-color: #45a049;
+  opacity: 1;
+}
+
+.post-form-cancel:hover {
+  opacity: 1;
 }
 
 .devise-form {
@@ -35,7 +53,7 @@
   padding: 20px;
 }
 
-.post-devise-input {
+.devise-input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -45,7 +63,7 @@
   box-sizing: border-box;
 }
 
-.post-devise-submit {
+.devise-submit {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -54,10 +72,10 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.post-devise-cancel {
+.devise-cancel {
   width: 100%;
   background-color: rgb(169, 20, 9) !important;
   color: white;
@@ -66,14 +84,14 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
   text-decoration: none;
 }
 
-.post-devise-submit:hover {
+.devise-submit:hover {
   opacity: 1;
 }
 
-.post-devise-cancel:hover {
+.devise-cancel:hover {
   opacity: 1;
 }
