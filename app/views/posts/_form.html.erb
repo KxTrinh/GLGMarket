@@ -6,7 +6,7 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true, accept:"image/png, image/jpeg", class:'form-control' } %>
 
     <div class="actions d-flex mt-4">
-      <%= link_to 'Back to home', root_path, class: 'post-form-cancel text-center' %>
+      <%= link_to 'Back', root_path, class: 'post-form-back text-center' %>
       <%= f.button :submit, "Create a post", class: 'post-form-submit'%>
     </div>
   </div>

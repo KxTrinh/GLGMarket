@@ -20,7 +20,8 @@
     <% end %>
 
     <div class="actions d-flex">
-      <%= link_to 'Back to home', root_path, class: 'devise-cancel text-center' %>
+      <%#= link_to 'Back to home', root_path, class: 'devise-cancel text-center' %>
+      <%= link_to "Back", :back, class: 'devise-back text-center' %>
       <%= f.submit "Log in", class: 'devise-submit' %>
     </div>
   <% end %>

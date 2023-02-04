@@ -26,24 +26,24 @@
   opacity: 0.8;
 }
 
-.post-form-cancel {
+.post-form-back {
   width: 100%;
-  background-color: rgb(169, 20, 9);
-  color: white;
-  padding: 14px 20px;
+  background-color: #0d6efd !important;
+  color: white !important;
+  padding: 14px 20px !important;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  text-decoration: none;
   opacity: 0.8;
+  text-decoration: none;
 }
 
 .post-form-submit:hover {
   opacity: 1;
 }
 
-.post-form-cancel:hover {
+.post-form-back:hover {
   opacity: 1;
 }
 
@@ -88,10 +88,27 @@
   text-decoration: none;
 }
 
+.devise-back {
+  width: 100%;
+  background-color: #0d6efd !important;
+  color: white !important;
+  padding: 14px 20px !important;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
 .devise-submit:hover {
   opacity: 1;
 }
 
 .devise-cancel:hover {
+  opacity: 1;
+}
+
+.devise-back:hover {
   opacity: 1;
 }
