@@ -58,14 +58,14 @@
       <%= f.password_field :current_password, autocomplete: "current-password", class: 'devise-input' %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Update", class: "btn devise-back", style: 'width: 25%' %>
+    <div class="actions d-flex">
+      <%= link_to "Back", :back, class: "devise-back", style: 'width: 50%' %>
+      <%= f.submit "Update", class: "devise-submit", style: 'width: 50%' %>
     </div>
   <% end %>
 
   <h3>Cancel my account</h3>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), class: "devise-cancel", style: 'width: 25%', data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), class: "devise-cancel", style: 'width: 50%', data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <%= link_to "Back", :back, class: "btn devise-back", style: 'width: 25%' %>
 </div>
