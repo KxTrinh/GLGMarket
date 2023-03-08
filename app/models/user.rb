@@ -9,7 +9,7 @@ class User < ApplicationRecord
   # has_many :bought_products, through: :posts, source: :product, dependent: :destroy
 
   validates :name, :last_name, :email, presence: true
-  validates :email, uniqueness: true
+  validates :email, uniqueness: { case_sensitive: false }
   validates :age, numericality: { only_integer: true }
   validates :age, comparison: { greater_than: 0 }
 
