@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   validates :title, :content, presence: true
   validates :price, numericality: { only_integer: true }
-  validates :price, comparison: { greater_than: 0 }
+  validates :price, comparison: { greater_than_or_equal_to: 0 }
 
   has_many_attached :photos
 end
