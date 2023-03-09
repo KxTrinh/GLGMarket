@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :posts, only: [ :index, :my_posts]
+      resources :posts, only: [ :index]
+      get 'myposts', to: 'posts#my_posts'
     end
   end
 end
